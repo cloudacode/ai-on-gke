@@ -54,7 +54,6 @@ module "project-services" {
     "pubsub.googleapis.com",
     "servicenetworking.googleapis.com",
     "serviceusage.googleapis.com",
-    "sourcerepo.googleapis.com",
     "sqladmin.googleapis.com",
     "iap.googleapis.com"
   ])

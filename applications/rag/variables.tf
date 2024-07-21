@@ -358,14 +358,16 @@ variable "cpu_pools" {
     accelerator_count      = optional(number, 0)
   }))
   default = [{
-    name         = "cpu-pool"
-    machine_type = "n1-standard-16"
-    autoscaling  = true
-    min_count    = 1
-    max_count    = 3
-    enable_gcfs  = true
-    disk_size_gb = 100
-    disk_type    = "pd-standard"
+    name               = "cpu-pool"
+    machine_type       = "n1-standard-16"
+    autoscaling        = true
+    initial_node_count = 3
+    min_count          = 1
+    max_count          = 6
+    enable_gcfs        = true
+    disk_size_gb       = 100
+    disk_type          = "pd-standard"
+    spot               = true
   }]
 }
 

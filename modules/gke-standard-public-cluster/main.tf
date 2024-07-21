@@ -57,4 +57,14 @@ module "gke" {
   node_pools_tags = {
     all = var.all_node_pools_tags
   }
+
+  node_pools_taints = {
+    gpu-pool-l4 = [
+      {
+        key    = "nvidia.com/gpu"
+        value  = "true"
+        effect = "NO_SCHEDULE"
+      }
+    ]
+  }
 }
